@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--ff-poppins);
-    font-size: 15px;
+    font-size: 0.938rem;
 }
 
 :root{
@@ -68,6 +68,59 @@ body{
     margin: 1.5rem auto 0 auto;
     max-width: 55ch;
 }
+
+/*---------- card section -----------*/
+.cards-wrapper{
+    width: 90%;
+    background-color: rgb(202, 197, 243);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* all card */
+.card{
+    background-color: #fff;
+    width: calc(100% / 4 - 0rem);
+    min-width: 21.875rem;
+    margin: 0 0.938rem;
+    padding: 2rem;
+    border-radius: .3rem;
+}
+
+.card_heading{
+    font-size: 1.25rem;
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+
+.card_para{
+    font-size: 0.89rem;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.card_img{
+    display: block;
+    margin: 2.5rem 0 0 auto;
+}
+
+/* separet card */
+.card-1{
+    border-top: 0.25rem solid var(--Cyan);
+}
+.card-2{
+    border-top: 0.25rem solid var(--Red);
+}
+.card-3{
+    border-top: 0.25rem solid var(--Blue);
+}
+.card-4{
+    border-top: 0.25rem solid var(--Orange);
+}
+
+
 
 
 /*----------------- responsive ------------------*/
