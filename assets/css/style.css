@@ -23,7 +23,7 @@
 }
 
 body{
-    background-color: lightblue;
+    background-color: transparent;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -38,16 +38,15 @@ body{
     background-color: var(--Very-Light-Gray);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
 /*-------------- heading ---------------*/
 .heading{
     width: 90%;
-    background-color: lightcyan;
+    background-color: transparent;
     text-align: center;
-    margin: 5.625rem 0rem 0rem 0rem;
 }
 
 .main-tag{
@@ -72,10 +71,12 @@ body{
 /*---------- card section -----------*/
 .cards-wrapper{
     width: 90%;
-    background-color: rgb(202, 197, 243);
+    background-color: transparent;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 4rem;
 }
 
 /* all card */
@@ -83,9 +84,10 @@ body{
     background-color: #fff;
     width: calc(100% / 4 - 0rem);
     min-width: 21.875rem;
-    margin: 0 0.938rem;
-    padding: 2rem;
+    margin: 0 1rem;
+    padding: 1.8rem;
     border-radius: .3rem;
+    box-shadow: 0 3px 40px -5px rgba(0, 0, 0, 0.1);
 }
 
 .card_heading{
@@ -98,32 +100,74 @@ body{
     font-size: 0.89rem;
     color: var(--Grayish-Blue);
     font-weight: 400;
-    margin-top: 1rem;
+    margin-top: .9rem;
 }
 
 .card_img{
     display: block;
-    margin: 2.5rem 0 0 auto;
+    margin: 2.2rem 0 0 auto;
 }
 
 /* separet card */
 .card-1{
     border-top: 0.25rem solid var(--Cyan);
+    transform: translateY(9rem);
 }
 .card-2{
     border-top: 0.25rem solid var(--Red);
 }
 .card-3{
     border-top: 0.25rem solid var(--Blue);
+    transform: translateY(9rem);
 }
 .card-4{
     border-top: 0.25rem solid var(--Orange);
+    margin-top: 2rem;
 }
 
 
 
 
 /*----------------- responsive ------------------*/
+@media(max-width: 1194px){
+    /* separet card */
+    .card-1, .card-3{
+        transform: translateY(0);
+    }
+
+    .card-3{
+        margin-top: 2rem;
+    }
+}
+
+
+@media(max-width: 796px){
+    /*------------ heading -------------*/
+    .heading{
+        padding-top: 4rem;
+    }
+
+    /*---------- cards wrapper ---------*/
+    .cards-wrapper{
+        padding-bottom: 4rem;
+    }
+
+    /* separet card */
+    .card-2{
+        margin-top: 2rem;
+    }
+
+    .card-3{
+        transform: translateY(18rem);
+    }
+
+    .card-4{
+        transform: translateY(-18rem);
+    }
+}
+
+
+
 @media(max-width: 404px) {
     /*------------ heading -------------*/
     .main-tag, .sub-tag{
